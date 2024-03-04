@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 * @author berkayaslan
 * */
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "user_table")
 @Data

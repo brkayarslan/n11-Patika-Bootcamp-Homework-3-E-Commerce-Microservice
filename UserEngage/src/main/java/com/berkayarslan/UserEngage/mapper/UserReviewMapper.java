@@ -1,6 +1,7 @@
 package com.berkayarslan.UserEngage.mapper;
 
 import com.berkayarslan.UserEngage.dto.UserReviewDTO;
+import com.berkayarslan.UserEngage.dto.UserReviewDetailDTO;
 import com.berkayarslan.UserEngage.model.UserReview;
 import com.berkayarslan.UserEngage.request.user_review.UserReviewSaveRequest;
 import org.mapstruct.Mapper;
@@ -18,4 +19,6 @@ public interface UserReviewMapper {
     UserReview convertToUserReview(UserReviewSaveRequest request);
 
     List<UserReviewDTO> converToReviewList(List<UserReview> review);
+
+    UserReviewDetailDTO convertToReviewDetailDTO(UserReview userReview);
 }

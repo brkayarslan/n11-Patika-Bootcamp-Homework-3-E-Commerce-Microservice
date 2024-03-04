@@ -1,0 +1,19 @@
+package com.berkayarslan.ProductEngage.model;
+
+
+import com.berkayarslan.ProductEngage.general.BaseEntity;
+import jakarta.persistence.*;
+import lombok.Data;
+
+
+@Data
+@Entity
+@Table(name ="CATEGORY")
+public class Category extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+}

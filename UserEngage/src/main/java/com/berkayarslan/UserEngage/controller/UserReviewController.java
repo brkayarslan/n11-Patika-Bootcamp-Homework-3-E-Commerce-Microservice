@@ -2,6 +2,7 @@ package com.berkayarslan.UserEngage.controller;
 
 import com.berkayarslan.UserEngage.controller.contract.UserReviewControllerContract;
 import com.berkayarslan.UserEngage.dto.UserReviewDTO;
+import com.berkayarslan.UserEngage.dto.UserReviewDetailDTO;
 import com.berkayarslan.UserEngage.general.RestResponse;
 import com.berkayarslan.UserEngage.request.user_review.UserReviewSaveRequest;
 import com.berkayarslan.UserEngage.request.user_review.UserReviewUpdateRequest;
@@ -28,8 +29,8 @@ public class UserReviewController {
 
 
     @GetMapping("/productId/{id}")
-    public ResponseEntity<RestResponse<List<UserReviewDTO>>> findAllReviewByProductId(@PathVariable Long id){
-        List<UserReviewDTO> reviewDTOS = reviewControllerContract.findReviewListByProductId(id);
+    public ResponseEntity<RestResponse<List<UserReviewDetailDTO>>> findAllReviewByProductId(@PathVariable Long id){
+        List<UserReviewDetailDTO> reviewDTOS = reviewControllerContract.findReviewListByProductId(id);
         return ResponseEntity.ok(RestResponse.of(reviewDTOS));
     }
 
